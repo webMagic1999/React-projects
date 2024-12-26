@@ -251,7 +251,10 @@ function Footer() {
   return (
     <footer>
       <p>
-        Created by <a href="#">Gourav Mishra</a>
+        Created by{" "}
+        <a href="https://www.linkedin.com/in/gourav-mishra-622657255/">
+          Gourav Mishra
+        </a>
       </p>
     </footer>
   );
