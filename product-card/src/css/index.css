@@ -1,0 +1,297 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:300,300italic,regular,600,600italic,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700,800,900,italic,500italic,600italic,700italic,800italic,900italic);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #fff;
+  background-color: #0d1b2a;
+}
+
+/* Navbar Mobile and Desktop */
+nav {
+  padding: 0.5rem 1rem;
+  background-color: #001219;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+}
+
+.desk-nav-links {
+  display: none;
+}
+
+.menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 210px;
+  height: 100%;
+  padding: 4rem 1rem;
+  background-color: #1d3557;
+  opacity: 0; /* Initially invisible */
+  transform: translateX(100%); /* Off-screen */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Smooth sliding and fading */
+  z-index: 98;
+}
+
+.menu.active {
+  opacity: 1; /* Fully visible */
+  transform: translateX(0); /* Slide into view */
+}
+
+.menu-icon button {
+  top: 0.75rem;
+  right: 1rem;
+  position: fixed;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #e5e5e5;
+  font-size: 1.5rem;
+}
+
+ul li {
+  list-style-type: none;
+  padding: 0.5rem 0rem;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+ul .border-b {
+  padding: 1px;
+  width: 0%;
+  transition: all 0.4s ease-in-out;
+}
+
+.menu.active ul li:hover .border-b {
+  width: 50%;
+  background-color: red;
+}
+
+@media only screen and (min-width: 650px) {
+  .desk-nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .menu,
+  .menu.active,
+  .menu-icon {
+    display: none;
+  }
+
+  .desk-nav-links li:hover .border-b {
+    width: 100%;
+    background-color: red;
+  }
+}
+
+/* Main Mobile and Desktop */
+
+main {
+  padding: 4rem 1rem;
+}
+
+.filter_and_sort {
+  padding: 1rem 0rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter_and_sort label {
+  font-size: 14px;
+  color: #ffecc0;
+}
+
+.filter_and_sort select {
+  padding: 0.25rem 0.5rem;
+  /* background-color: #d8f3dc; */
+  background-color: #ffecc0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.product-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.product {
+  height: 50vh;
+  background-color: #1c3562;
+  display: grid;
+  gap: 0.1rem;
+  justify-content: space-between;
+  padding: 0.5rem;
+  font-size: 12px;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product_img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.product img {
+  object-fit: cover;
+  width: 100%;
+  height: 100px;
+  object-position: center;
+}
+
+.price .undiscounted-price {
+  text-decoration: line-through;
+}
+
+.product h5 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-size: 12px;
+  overflow: hidden; /* Ensure no overflow from title */
+  text-overflow: ellipsis; /* Display ellipsis if title is too long */
+  white-space: nowrap;
+}
+
+.product .category {
+  text-transform: capitalize;
+}
+
+.product p {
+  overflow: hidden; /* Ensure no overflow from title */
+  text-overflow: ellipsis; /* Display ellipsis if title is too long */
+  white-space: nowrap;
+}
+
+.product .ratings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* From Uiverse.io by JaydipPrajapati1910 */
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 15px;
+  gap: 15px;
+  background-color: #181717;
+
+  outline-offset: -3px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.button .text {
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+  transition: 400ms;
+}
+
+.button svg path {
+  transition: 400ms;
+}
+
+.button:hover {
+  background-color: transparent;
+  outline: 1px #e0e1dd solid;
+}
+
+.button:hover .text {
+  color: #e0e1dd;
+}
+
+.button:hover svg path {
+  fill: #e0e1dd;
+}
+
+@media only screen and (min-width: 650px) {
+  main {
+    padding: 5rem 1rem;
+  }
+  .filter_and_sort {
+    justify-content: end;
+    gap: 2rem;
+  }
+
+  .product-box {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .product_img img {
+    height: 200px;
+  }
+}
+
+/* Footer */
+
+footer {
+  background-color: #001219;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 98;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+/* loadind */
+.loading {
+  padding: 1rem;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+.loading img {
+  max-width: 100%;
+  width: 25%;
+  height: auto;
+  display: block;
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-filter: none;
+  filter: none;
+  image-rendering: optimizeQuality;
+  image-rendering: smooth;
+}
+
+/* error */
+.error {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  height: 100vh;
+  text-align: center;
+}

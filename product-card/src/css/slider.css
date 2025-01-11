@@ -1,0 +1,71 @@
+/* Team Slider CSS */
+
+/* Default (Mobile View) */
+.team {
+  text-align: center;
+  padding: 20px;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
+.images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%; /* Each slide takes full width of container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  width: 60%; /* Image occupies half the container for mobile */
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #606c38;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.slide:not(.active) img {
+  transform: scale(0.8);
+  opacity: 0.25;
+}
+
+.prevNnext {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.prevNnext button {
+  padding: 6px 16px;
+  border: none;
+  outline: none;
+  background-color: #606c38;
+  font-weight: 500;
+  border-radius: 5px;
+  color: #ffffff;
+  transition: all 0.4s ease-in-out;
+}
+
+.prevNnext button:hover {
+  background-color: #fefae0;
+  color: #000;
+  cursor: pointer;
+}
+
+/* Desktop View */
+@media only screen and (min-width: 650px) {
+  .slide img {
+    width: 25%; /* Image is 1/4 of the container width */
+  }
+}

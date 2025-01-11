@@ -1,0 +1,39 @@
+.about div {
+  margin: 1rem 0rem;
+}
+
+h2 {
+  text-align: center;
+}
+
+main div h4 {
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 12px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  text-align: justify;
+}
+
+ul li b {
+  font-weight: 600;
+}
+
+.values button {
+  background-color: #606c38;
+  color: #ffffff;
+  font-size: 14px;
+  height: 2rem;
+  width: 10rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+
+  &:hover {
+    background-color: #fefae0;
+    color: #000;
+  }
+}

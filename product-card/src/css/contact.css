@@ -1,0 +1,51 @@
+.contact-info {
+  background: #283618;
+  padding: 1rem;
+  display: grid;
+  place-items: center;
+  gap: 0.25rem;
+  height: 30vh;
+  transition: all 1s ease-in-out;
+  transform: rotateY(0deg);
+  cursor: pointer;
+  box-shadow: 5px 5px #f6bd60;
+}
+
+.contact-info.active {
+  transform: rotateY(360deg);
+  cursor: pointer;
+  box-shadow: 5px 5px #8ecae6;
+}
+
+.contact-info h5 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.contact-info p a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    text-decoration: none;
+    color: #606c38;
+  }
+
+  &:active,
+  &:focus {
+    text-decoration: none;
+    color: #606c38;
+  }
+}
+
+footer p {
+  text-align: center;
+}
+
+@media only screen and (min-width: 650px) {
+  .contact-info {
+    height: 25vh;
+    width: 400px;
+  }
+}
