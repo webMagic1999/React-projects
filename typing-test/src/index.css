@@ -1,0 +1,143 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:300,300italic,regular,600,600italic,700,800,900);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #3d3d3d;
+  background-color: #3d3d3d;
+  display: grid;
+  place-items: center;
+}
+
+.App {
+  background-color: #fffaec;
+}
+
+nav {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+main {
+  padding: 1rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.stats > *:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0.75rem 0.5rem;
+  background-color: #eeeeee;
+  opacity: 0;
+}
+
+.stats div {
+  background: #578e7e;
+  margin: 0.5rem;
+  padding: 1rem;
+  display: grid;
+  place-items: center;
+  color: #fffaec;
+  border-radius: 0.5rem;
+}
+
+.stats div p {
+  white-space: nowrap;
+}
+
+.display-para {
+  padding: 1rem 0rem;
+  text-align: justify;
+  user-select: none;
+}
+
+.char {
+  color: #3d3d3d;
+  font-size: 0.9rem;
+  text-align: center;
+  border-radius: 2px;
+  margin: 0 0.075rem 0rem 0rem;
+}
+
+.char.active {
+  color: #6eacda;
+  border-bottom: 0.105rem solid #6eacda;
+  animation: blink 1s 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    border-color: #6eacda;
+  }
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: #6eacda;
+  }
+}
+
+.char.correct {
+  color: #379777;
+  background-color: #9ec8b9;
+}
+
+.char.incorrect {
+  color: #f05941;
+  background-color: #ffbcc5;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  margin: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  outline: none;
+  height: 2rem;
+  width: 6rem;
+  background-color: #379777;
+  color: #fffaec;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+  border-radius: 0.5rem;
+
+  &:hover {
+    background-color: #40a2d8;
+  }
+}
