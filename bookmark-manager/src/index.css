@@ -1,0 +1,256 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:300,300italic,regular,600,600italic,700,800,900);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #344e41;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 0 8px #f4f4f4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+header h1 {
+  color: #dad7cd;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-size: 1.5rem;
+}
+
+header h1 small {
+  font-size: 0.4rem;
+  font-weight: 600;
+}
+
+header button {
+  height: 2rem;
+  width: 6.5rem;
+  white-space: nowrap;
+  border: none;
+  outline: none;
+  background-color: #a3b18a;
+  color: #f4f4f4;
+  cursor: pointer;
+}
+
+main {
+  background-color: #3a5a40;
+  height: 100vh;
+}
+
+.overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #1d1d1d92;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-window {
+  position: relative;
+  background-color: #588157;
+  width: 100%;
+  max-width: 350px;
+}
+
+.modal-window > button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-right: -5px;
+  margin-top: -5px;
+  border: none;
+  outline: none;
+  background-color: #000000;
+  color: #f4f4f4;
+  font-size: 0.7rem;
+  transform: scale(1.2);
+  height: 1.2rem;
+  width: 1.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+form {
+  padding: 1rem 1.5rem;
+}
+
+form h2 {
+  text-align: center;
+  color: #f4f4f4;
+  text-transform: uppercase;
+}
+
+form input {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0rem;
+  border: none;
+  outline: none;
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
+
+  &:active {
+    border: none;
+    outline: none;
+  }
+}
+
+form > button {
+  width: 100%;
+  border: none;
+  outline: none;
+  height: 2rem;
+  margin-top: 0.5rem;
+  background-color: #a3b18a;
+  color: #f4f4f4;
+  cursor: pointer;
+}
+
+.bookmark_table {
+  padding: 4rem 1rem;
+}
+
+.bookmark_table h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #f4f4f4;
+}
+
+.bookmark_table p {
+  text-align: center;
+  color: #f4f4f4;
+  font-size: 0.9rem;
+  padding: 1rem 0rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-x: auto;
+  display: block;
+}
+
+tr {
+  border: 1px solid #f4f4f4;
+  overflow-x: auto;
+}
+
+@media only screen and (min-width: 625px) {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    display: table;
+    overflow: visible;
+  }
+
+  tr {
+    border: 1px solid #f4f4f4;
+    overflow: visible;
+  }
+}
+
+th,
+td {
+  font-size: 0.8rem;
+  text-align: left;
+  padding: 0.25rem;
+  color: #f4f4f4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.action_buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.action_buttons button {
+  height: 2rem;
+  width: 4.5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.action_buttons :nth-child(1) {
+  background-color: #0077b6;
+  color: #f4f4f4;
+  transition: 0.4s all ease-in-out;
+
+  &:focus,
+  &:hover {
+    border-radius: 1rem;
+  }
+}
+.action_buttons :nth-child(2) {
+  background-color: #76c893;
+  color: #333333;
+  transition: 0.4s all ease-in-out;
+
+  &:focus,
+  &:hover {
+    border-radius: 1rem;
+  }
+}
+.action_buttons :nth-child(3) {
+  background-color: #ef233c;
+  color: #f4f4f4;
+  transition: 0.4s all ease-in-out;
+
+  &:focus,
+  &:hover {
+    border-radius: 1rem;
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #344e41;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 0 8px #f4f4f4;
+  z-index: 98;
+}
+
+footer p {
+  text-align: center;
+  color: #f4f4f4;
+  font-size: 0.825rem;
+}
+
+footer p a {
+  text-decoration: none;
+  color: #dad7cd;
+  &:hover {
+    text-decoration: none;
+    color: #dad7cd;
+  }
+}
