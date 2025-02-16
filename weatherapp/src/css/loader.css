@@ -1,0 +1,9 @@
+.loading {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.loading img {
+  width: 50%;
+}

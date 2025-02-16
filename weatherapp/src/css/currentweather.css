@@ -1,0 +1,114 @@
+.current_weather {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.current_weather > div {
+  margin: 1.5rem 0rem;
+}
+
+.weather-main h2 {
+  font-weight: 300;
+}
+
+.current_weather .current-temp {
+  font-size: 3.25rem;
+  font-weight: 200;
+}
+
+.current_weather p {
+  font-size: 0.8rem;
+}
+
+/* Grid Layouts */
+.sun-moon,
+.astro-info,
+.wind-info,
+.air-quality-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Weather Info Sections */
+.sun,
+.moon,
+.hourly-forecast,
+.atmospheric-conditions,
+.wind-info,
+.air-quality-info,
+.day {
+  backdrop-filter: blur(12px) saturate(200%);
+  -webkit-backdrop-filter: blur(12px) saturate(200%);
+  background-color: rgba(63, 148, 202, 0.49);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  margin: 0.75rem;
+  padding: 1rem 0.5rem;
+  text-align: start;
+  white-space: nowrap;
+}
+
+.day {
+  padding: 1rem;
+  text-align: center;
+  height: 10rem;
+  width: 20rem;
+}
+
+/* Scrollable Forecast Sections */
+.hourly-forecast,
+.forecast-info {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.forecast-info {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.hourly-forecast > div {
+  text-align: center;
+}
+
+.hourly-forecast > div > p {
+  white-space: nowrap;
+}
+
+.astro-info h3 {
+  padding-bottom: 0.5rem;
+}
+
+.current_weather p {
+  padding-bottom: 0.5rem;
+}
+
+.atmospheric-conditions {
+  text-align: center;
+}
+
+@media only screen and (min-width: 625px) {
+  .current_weather {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .todays-forecast,
+  .three-day-forecast {
+    grid-column: span 2;
+  }
+
+  .atmostphere,
+  .wind,
+  .air-quality {
+    grid-column: span 1;
+  }
+  h3 {
+    text-align: left;
+  }
+
+  .atmospheric-conditions {
+    text-align: start;
+  }
+}
