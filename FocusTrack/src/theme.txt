@@ -1,0 +1,44 @@
+🎨 Light Mode Palette (Clean & Minimal)
+Element	Color
+Background	#F8F9FA (Soft Gray)
+Todo Container	#FFFFFF (Pure White)
+Primary Text	#212529 (Deep Gray)
+Secondary Text	#6C757D (Muted Gray)
+Accent (Buttons, Checkbox)	#007BFF (Bright Blue)
+Completed Todo	#28A745 (Success Green)
+Delete Button	#DC3545 (Soft Red)
+
+Priority	Background Color	Border Color	Text Color
+Top Priority	#FFEBEE (Light Red)	#E57373 (Muted Red)	#B71C1C (Dark Red)
+High	#FFF3CD (Light Yellow)	#FFC107 (Amber)	#795548 (Dark Brown)
+Medium	#E3F2FD (Light Blue)	#42A5F5 (Blue)	#0D47A1 (Dark Blue)
+Low	#E8F5E9 (Light Green)	#81C784 (Green)	#1B5E20 (Dark Green)
+
+Soft gray background reduces eye strain
+Blue for actions (Add/Save buttons)
+Green for completed tasks (positive reinforcement)
+Red for deleting tasks
+
+
+
+//------------------------------------------------------------------------------------------------//
+
+
+
+🌙 Dark Mode Palette (Sleek & Modern)
+Element	Color
+Background	#121212 (Almost Black)
+Todo Container	#1E1E1E (Deep Gray)
+Primary Text	#E0E0E0 (Light Gray)
+Secondary Text	#B0B0B0 (Muted Gray)
+Accent (Buttons, Checkbox)	#90CAF9 (Soft Blue)
+Completed Todo	#66BB6A (Success Green)
+Delete Button	#EF5350 (Bright Red)
+
+Priority	Background Color	Border Color	Text Color
+Top Priority	#3B1C1C (Dark Red)	#E57373 (Muted Red)	#FFCDD2 (Soft Pink)
+High	#3E2723 (Deep Orange)	#FFC107 (Amber)	#FFECB3 (Warm Yellow)
+Medium	#1A237E (Deep Blue)	#42A5F5 (Blue)	#BBDEFB (Sky Blue)
+Low	#1B5E20 (Dark Green)	#81C784 (Green)	#C8E6C9 (Mint Green)
+
+
