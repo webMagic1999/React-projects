@@ -67,17 +67,17 @@ export default function CurrentWeather({ position, query, onSetQuery }) {
     };
   }, [latLon]);
 
-  function getAQIDescription(index) {
-    const levels = [
-      "Good",
-      "Moderate",
-      "Unhealthy for Sensitive Groups",
-      "Unhealthy",
-      "Very Unhealthy",
-      "Hazardous",
-    ];
-    return levels[index - 1] || "Unknown";
-  }
+  // function getAQIDescription(index) {
+  //   const levels = [
+  //     "Good",
+  //     "Moderate",
+  //     "Unhealthy for Sensitive Groups",
+  //     "Unhealthy",
+  //     "Very Unhealthy",
+  //     "Hazardous",
+  //   ];
+  //   return levels[index - 1] || "Unknown";
+  // }
 
   return (
     <div className="current_weather">
