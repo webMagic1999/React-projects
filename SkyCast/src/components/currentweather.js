@@ -212,7 +212,7 @@ export default function CurrentWeather({ position, query, onSetQuery }) {
               <p>Gust Speed : {currentWeather.current.gust_kph} kph</p>
             </div>
           </div>
-          <div className="air-quality">
+          {/* <div className="air-quality">
             <h3>Air Quality Index</h3>
             <div className="air-quality-info">
               <p>
@@ -274,7 +274,7 @@ export default function CurrentWeather({ position, query, onSetQuery }) {
                 )}
               </p>
             </div>
-          </div>
+          </div> */}
         </>
       ) : (
         <Loading />
